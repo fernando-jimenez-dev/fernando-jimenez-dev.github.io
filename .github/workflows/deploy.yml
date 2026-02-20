@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/add-github-pages
   workflow_dispatch:
 
 permissions:
@@ -42,7 +41,7 @@ jobs:
           path: dist
 
   deploy:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:

@@ -1,46 +1,121 @@
-# Astro Starter Kit: Basics
+# Fernando Jimenez - Personal Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repository contains the source code for my personal website.
+It is built with Astro and deployed as a static site on GitHub Pages.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## For Recruiters
 
-## 🚀 Project Structure
+If you landed here to evaluate my profile, this website is meant to show:
 
-Inside of your Astro project, you'll see the following folders and files:
+- How I communicate technical ideas clearly
+- How I structure a clean, maintainable frontend codebase
+- How I build with a pragmatic, minimal approach
+
+Core profile:
+
+- Senior .NET Engineer
+- Practical architect mindset
+- Strong DevOps and automation exposure
+
+Website: `https://fernando-jimenez-dev.github.io`
+
+## Purpose
+
+This site is my online home base. It exists to:
+
+- Centralize my public technical presence
+- Publish technical writing and notes
+- Host small tools and experiments I ship
+- Serve as a public reference for my coding style
+
+## Why This Repo Is Intentionally Minimal
+
+This is a deliberate architecture choice.
+
+- Static-first for speed, reliability, and low maintenance
+- No CMS because content volume is small and controlled
+- No UI framework because current UI needs are simple
+- No runtime backend because the site does not need one
+
+The goal is clarity and durability over unnecessary complexity.
+
+## Tech Stack
+
+- Astro (static site generation)
+- Custom CSS (no UI framework)
+- Self-hosted fonts (Inter, Space Grotesk, JetBrains Mono)
+- GitHub Actions (CI/CD)
+- GitHub Pages (hosting)
+
+## Technical Notes (For Future Me)
+
+### Commands
+
+Run all commands from the project root.
+
+| Command | Purpose |
+| :-- | :-- |
+| `npm install` | Install dependencies |
+| `npm run dev` | Start local dev server (`http://localhost:4321`) |
+| `npm run build` | Build static output to `./dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run astro ...` | Run Astro CLI commands (for example `astro check`) |
+| `npm run astro -- --help` | Show Astro CLI help |
+
+### Project Structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+|- public/          # static assets (favicon, robots, fonts)
+|- src/
+|  |- assets/       # source assets
+|  |- components/   # UI components (Welcome.astro)
+|  |- layouts/      # shared layout (Layout.astro)
+|  |- pages/        # routes (index.astro, sitemap.xml.ts)
+|  |- styles/       # global styles
+|- astro.config.mjs # Astro config (site URL, build settings)
+|- package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Deployment
 
-## 🧞 Commands
+Deployment is automated via GitHub Actions on pushes to `main`.
 
-All commands are run from the root of the project, from a terminal:
+### Commit Convention
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Use Conventional Commits:
 
-## 👀 Want to learn more?
+```
+type(scope): short summary
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- optional detail A
+- optional detail B
+```
+
+Examples:
+
+- `feat(site): add homepage hero links`
+- `fix(layout): remove viewport overflow`
+- `docs(readme): improve recruiter section`
+
+Common types:
+
+- `feat` - new feature
+- `fix` - bug fix
+- `docs` - documentation only
+- `style` - visual/formatting changes without behavior change
+- `refactor` - code structure change without behavior change
+- `perf` - performance improvement
+- `test` - add/update tests
+- `build` - build/dependency changes
+- `ci` - CI/CD workflow changes
+- `chore` - maintenance tasks
+- `revert` - revert a previous commit
+
+Common scopes in this repo:
+
+- `site`, `layout`, `styles`, `fonts`, `seo`, `readme`, `deploy`, `ci`
+
+### Useful Reference
+
+- Astro docs: https://docs.astro.build

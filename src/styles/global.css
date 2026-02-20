@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/inter/Inter-Variable.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("/fonts/space-grotesk/SpaceGrotesk-Variable.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 300 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	src: url("/fonts/jetbrains-mono/JetbrainsMono-Variable.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 100 800;
+	font-display: swap;
+}
+
+body {
+	font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Space Grotesk", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+code,
+pre {
+	font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.font-body {
+	font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.font-heading {
+	font-family: "Space Grotesk", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.font-mono {
+	font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+}

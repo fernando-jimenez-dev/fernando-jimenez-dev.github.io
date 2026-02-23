@@ -5,9 +5,13 @@ import AboutSection from "./components/AboutSection.astro";
 ---
 
 <div id="container" style={`--bg-image: url('${background.src}')`}>
-	<main>
-		<HeroSection />
-		<AboutSection />
+	<main class="index-page">
+		<div class="section-rail section-rail--hero">
+			<HeroSection />
+		</div>
+		<div class="section-rail section-rail--about">
+			<AboutSection />
+		</div>
 	</main>
 </div>
 
@@ -35,7 +39,11 @@ import AboutSection from "./components/AboutSection.astro";
 		isolation: isolate;
 	}
 
-	main {
+	.index-page {
+		--section-frame-max: 68rem;
+		--hero-max: 48rem;
+		--about-max: 44rem;
+		--section-gap: 3.5rem;
 		position: relative;
 		z-index: 1;
 		min-height: calc(100vh - 3.5rem);
@@ -43,14 +51,33 @@ import AboutSection from "./components/AboutSection.astro";
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
-		gap: 3.5rem;
+		gap: var(--section-gap);
 		padding: clamp(2rem, 6vw, 5rem) 0;
 	}
 
+	.section-rail {
+		width: min(92vw, var(--section-frame-max));
+		margin: 0 auto;
+	}
+
+	.section-rail--hero {
+		--section-max: var(--hero-max);
+	}
+
+	.section-rail--about {
+		--section-max: var(--about-max);
+	}
+
+	@media (min-width: 1024px) {
+		.index-page {
+			--about-max: 62rem;
+		}
+	}
+
 	@media (max-width: 768px) {
-		main {
+		.index-page {
 			align-items: flex-start;
-			gap: 2.5rem;
+			--section-gap: 2.5rem;
 			padding: 1.5rem 0 3rem;
 		}
 	}

@@ -39,8 +39,9 @@
 <style>
 	.hero {
 		width: 100%;
-		max-width: 48rem;
-		padding-top: clamp(1rem, 3vw, 2rem);
+		max-width: var(--section-max, 48rem);
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	h1 {
@@ -58,10 +59,9 @@
 
 	.intro {
 		margin-top: 1.25rem;
-		max-width: 40rem;
 		font-size: 1.05rem;
-		line-height: 1.7;
 		color: #9ca3af;
+		text-align: center;
 	}
 
 	.links {
@@ -71,6 +71,7 @@
 		list-style: none;
 		margin: 2rem 0 0;
 		padding: 0;
+		justify-content: center;
 	}
 
 	.links a {

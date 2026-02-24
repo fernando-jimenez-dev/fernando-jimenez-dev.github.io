@@ -1,6 +1,6 @@
 <section class="about">
 	<div class="about-snapshot">
-		<p class="snapshot-first">
+		<p class="snapshot-first font-heading">
 			Systems Engineer by education, Software Engineer by craft.
 		</p>
 		<p>
@@ -22,7 +22,7 @@
 	</div>
 
 	<div class="about-story">
-		<p class="story-first">How I got here —</p>
+		<p class="story-first font-heading">How I got here —</p>
 		<p>
 			I didn't start with programming. I started with the whole machine - racks,
 			servers, networking, operating systems. I liked computers because they
@@ -277,6 +277,39 @@
 	}
 
 	@media (max-width: 768px) {
+		.about {
+			padding-left: 0;
+		}
+
+		.about::before,
+		.about-snapshot::before {
+			content: none;
+		}
+
+		.about-snapshot {
+			padding: 0.45rem 0.5rem 0.55rem;
+			border-radius: 0.5rem;
+		}
+
+		.about-snapshot::after {
+			left: 0;
+			border-radius: 0.5rem;
+			background:
+				linear-gradient(
+					to bottom,
+					rgba(16, 185, 129, 0.09) 0%,
+					rgba(16, 185, 129, 0.06) 55%,
+					rgba(16, 185, 129, 0.032) 84%,
+					rgba(16, 185, 129, 0.01) 96%,
+					rgba(16, 185, 129, 0) 100%
+				),
+				linear-gradient(
+					120deg,
+					rgba(16, 185, 129, 0.03) 0%,
+					rgba(16, 185, 129, 0) 65%
+				);
+		}
+
 		.about h2 {
 			font-size: clamp(1.4rem, 7vw, 1.75rem);
 		}

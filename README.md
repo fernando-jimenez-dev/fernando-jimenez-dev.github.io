@@ -13,7 +13,7 @@ If you landed here to evaluate my profile, this website is meant to show:
 
 Core profile:
 
-- Senior .NET Engineer
+- Staff-Level .NET Engineer
 - Practical architect mindset
 - Strong DevOps and automation exposure
 
@@ -43,7 +43,7 @@ The goal is clarity and durability over unnecessary complexity.
 
 - Astro (static site generation)
 - Custom CSS (no UI framework)
-- Self-hosted fonts (Inter, Space Grotesk, JetBrains Mono)
+- Fontsource variable fonts (Inter, Space Grotesk, JetBrains Mono)
 - GitHub Actions (CI/CD)
 - GitHub Pages (hosting)
 
@@ -66,11 +66,11 @@ Run all commands from the project root.
 
 ```text
 /
-|- public/          # static assets (favicon, robots, fonts)
+|- public/          # static assets (favicon, robots)
 |- src/
 |  |- assets/       # source assets
-|  |- components/   # UI components (Welcome.astro)
-|  |- layouts/      # shared layout (Layout.astro)
+|  |- features/     # feature modules (index page sections)
+|  |- layouts/      # shared layout (SiteLayout.astro)
 |  |- pages/        # routes (index.astro, sitemap.xml.ts)
 |  |- styles/       # global styles
 |- astro.config.mjs # Astro config (site URL, build settings)
